@@ -1,24 +1,8 @@
 let gulp = require('gulp'),
-  sourcemaps = require('gulp-sourcemaps'),
   $ = require('gulp-load-plugins')({ lazy: true }),
   browserSync = require('browser-sync').create(),
   reload = browserSync.reload,
-  del = require('del'),
-  package = require('./package.json')
-
-let banner = [
-  '/*!\n' +
-    ' * <%= package.name %>\n' +
-    ' * <%= package.title %>\n' +
-    ' * <%= package.url %>\n' +
-    ' * @author <%= package.author %>\n' +
-    ' * @version <%= package.version %>\n' +
-    ' * Copyright ' +
-    new Date().getFullYear() +
-    '. <%= package.license %> licensed.\n' +
-    ' */',
-  '\n'
-].join('')
+  del = require('del')
 
 let devBuild =
     (process.env.NODE_ENV || 'development').trim().toLowerCase() !==
