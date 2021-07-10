@@ -125,7 +125,6 @@ gulp.task(
         .pipe($.autoprefixer('last 4 version'))
         .pipe($.if(!devBuild, $.cssnano()))
         .pipe($.if(!devBuild, $.stripCssComments({ preserve: false })))
-        .pipe($.if(!devBuild, $.rename({ suffix: '.min' })))
         .pipe($.if(devBuild, $.sourcemaps.write('./maps')))
         .pipe(gulp.dest(dest + 'css'))
         // .pipe(browserSync.reload({stream:true, once: true}));
