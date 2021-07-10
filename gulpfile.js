@@ -25,15 +25,6 @@ let devBuild =
     'production',
   source = 'src/',
   dest = devBuild ? 'app/' : 'dist/',
-  images = {
-    in: source + 'images/**',
-    out: dest + 'assets/images'
-  },
-  html = {
-    in: [source + '*.html'],
-    watch: [source + '*.html', source + '_partials/**/*.html'],
-    out: dest
-  },
   css = {
     in: [source + 'styles/*.+(css|scss|sass)'],
     sassOpts: {
@@ -43,6 +34,19 @@ let devBuild =
       errLogToConsole: true,
       sourceMap: true
     }
+  },
+  fonts = {
+    in: source + 'fonts/**/*',
+    out: dest + 'fonts/'
+  },
+  html = {
+    in: [source + '*.html'],
+    watch: [source + '*.html', source + '_partials/**/*.html'],
+    out: dest
+  },
+  images = {
+    in: source + 'images/**',
+    out: dest + 'assets/images'
   }
 
 // Clean tasks
@@ -92,6 +96,14 @@ gulp.task('images', () => {
   )
 })
 
+// copy fonts
+gulp.task('fonts', () => {
+  return gulp
+    .src(fonts.in)
+    .pipe($.newer(dest + 'lbd/fonts/'))
+    .pipe(gulp.dest(dest + 'lbd/fonts/'))
+})
+
 // build HTML files
 gulp.task('html', function () {
   let page = gulp
@@ -108,32 +120,35 @@ gulp.task('html', function () {
   return page.pipe(gulp.dest(html.out))
 })
 
-gulp.task('sass', function () {
-  let cssFilter = $.filter(['**/*.+(css)'], {
-    restore: true
+gulp.task(
+  'sass',
+  gulp.series('fonts', function () {
+    let cssFilter = $.filter(['**/*.+(css)'], {
+      restore: true
+    })
+    return (
+      gulp
+        .src(css.in)
+        .pipe(cssFilter)
+        .pipe(
+          $.rename(function (path) {
+            path.extname = '.scss'
+          })
+        )
+        .pipe(cssFilter.restore)
+        .pipe($.if(devBuild, $.sourcemaps.init()))
+        .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.autoprefixer('last 4 version'))
+        .pipe($.if(!devBuild, $.cssnano()))
+        .pipe($.if(!devBuild, $.stripCssComments({ preserve: false })))
+        .pipe($.if(!devBuild, $.rename({ suffix: '.min' })))
+        .pipe($.if(devBuild, $.sourcemaps.write('./maps')))
+        .pipe(gulp.dest(dest + 'css'))
+        // .pipe(browserSync.reload({stream:true, once: true}));
+        .pipe(browserSync.stream({ match: '**/*.css' }))
+    )
   })
-  return (
-    gulp
-      .src(css.in)
-      .pipe(cssFilter)
-      .pipe(
-        $.rename(function (path) {
-          path.extname = '.scss'
-        })
-      )
-      .pipe(cssFilter.restore)
-      .pipe($.if(devBuild, $.sourcemaps.init()))
-      .pipe($.sass().on('error', $.sass.logError))
-      .pipe($.autoprefixer('last 4 version'))
-      .pipe($.if(!devBuild, $.cssnano()))
-      .pipe($.if(!devBuild, $.stripCssComments({ preserve: false })))
-      .pipe($.if(!devBuild, $.rename({ suffix: '.min' })))
-      .pipe($.if(devBuild, $.sourcemaps.write('./maps')))
-      .pipe(gulp.dest(dest + 'css'))
-      // .pipe(browserSync.reload({stream:true, once: true}));
-      .pipe(browserSync.stream({ match: '**/*.css' }))
-  )
-})
+)
 
 gulp.task('js', function () {
   gulp.src(`${source}js/lib/**/*.js`).pipe(gulp.dest(`${dest}js/lib`))
