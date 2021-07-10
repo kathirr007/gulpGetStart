@@ -2,6 +2,8 @@
 
 A Getting start Gulp Workflow boiler-plate for for Front end Dev to automate your workflow
 
+Please check the site built using this workflow **[here](https://gulp-get-start.vercel.app/)**
+
 ## Usage
 
 - Run `npm install`.
@@ -38,3 +40,12 @@ There are three objectives for the development phase. They are:
 
 - `strip-css-comments` and `cssnano` for CSS.
 - `uglify` for JS.
+
+## Useful resources
+
+- **[Gulp.js: Web Project Workflows](https://www.linkedin.com/learning/gulp-js-web-project-workflows)** by **[Ray Villaloboss](https://github.com/planetoftheweb)**
+- Getting Started with Gulp.js by **[Aleksandar Olić](https://github.com/aleksandar-olic)**
+
+## Thanks
+
+Based on the video tutorial course **Gulp.js: Web Project Workflows** by **[Ray Villaloboss](https://github.com/planetoftheweb)**
