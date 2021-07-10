@@ -1,60 +1,99 @@
 <!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>FastShell by @_Karamii</title>
+<html lang="en">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+  <!-- @include _partials/_site-meta.html -->
+  <title>Bootstrap 4 Layouts</title>
+</head>
 
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <link href="assets/css/style.min.css" rel="stylesheet">
+<body data-spy="scroll" data-target=".site-nav" data-offset="55">
 
-    <script src="assets/components/modernizr/modernizr.js"></script>
-  </head>
-  <body>
+  <header id="page-hero" class="site-header d-flex flex-column align-content-between">
 
-    <header class="header" role="banner">
-      <div class="logo">
-        <a href="/">
-          <img src="assets/img/logo.png" alt="Logo">
-        </a>
-      </div>
-      <nav class="nav" role="navigation">
-        <ul>
-          <li>
-            <a href="/"></a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="site-nav family-sans navbar navbar-expand-md navbar-dark fixed-top">
+      <!-- @include _partials/_header-nav.html -->
+    </nav>
+
+    <section class="layout-hero jumbotron jumbotron-fluid d-flex align-items-center mt-5 text-reverse">
+      <!-- @include _partials/_header-hero.html -->
+    </section>
+
+  </header>
+
+  <article id="page-multicolumn" class="page-section vertical-padding">
+
+    <header class="page-section-header container">
+      <!-- @include _partials/_multi-column-header.html -->
     </header>
 
-    <main class="main" role="main">
+    <section class="layout-multicolumn container family-sans text-uppercase text-center py-4">
+      <!-- @include _partials/_multi-column-content.html -->
+    </section>
+  </article>
 
-    </main>
+  <article id="page-media" class="page-section vertical-padding">
 
-    <aside class="sidebar" role="complementary">
+    <header class="page-section-header container text-center">
+      <!-- @include _partials/_page-media-header.html -->
+    </header>
 
-    </aside>
+    <section class="layout-media container my-5">
+      <!-- @include _partials/_page-media-content.html -->
+    </section>
 
-    <footer class="footer" role="contentinfo">
+  </article>
 
-    </footer>
+  <article id="page-photogrid" class="page-section">
 
-    <script src="assets/components/jquery/jquery.min.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
+    <header class="page-section-header text-center container">
+      <!-- @include _partials/_page-photo-grid-header.html -->
+    </header>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    <section class="layout-photogrid">
+      <!-- @include _partials/_page-photo-grid-content.html -->
+    </section>
+  </article>
 
-  </body>
+  <article id="page-carousel" class="page-section">
+
+    <section id="layout-carousel" class="layout-carousel carousel slide" data-ride="carousel">
+      <!-- @include _partials/_page-carousel-content.html -->
+    </section>
+
+  </article>
+
+  <article id="page-nested" class="page-section text-reverse">
+
+    <section class="layout-nested container-fluid vertical-padding">
+      <!-- @include _partials/_page-nested-content.html -->
+    </section>
+
+  </article>
+
+  <article id="page-icons" class="page-section">
+    <!-- @include _partials/_page-icons-content.html -->
+  </article>
+
+  <article id="page-floater" class="page-section vertical-padding">
+
+    <section class="layout-floater container text-reverse">
+      <!-- @include _partials/_page-floater-content.html -->
+    </section>
+
+  </article>
+
+  <article id="page-cards" class="page-section">
+
+    <section class="layout-cards container">
+      <!-- @include _partials/_page-cards-content.html -->
+    </section>
+
+  </article>
+
+  <!-- @include _partials/_site-footer.html -->
+  <!-- @include _partials/_image-modal.html -->
+  <!-- @include _partials/_site-scripts.html -->
+
+</body>
+
 </html>

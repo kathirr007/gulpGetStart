@@ -5,29 +5,45 @@
   "url": "",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kathirr007/gulpGetStart"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "bootstrap": "^4.3.1",
     "browser-sync": "^2.11.1",
+    "cross-env": "^7.0.3",
     "del": "^3.0.0",
-    "gulp": "^3.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^8.0.0",
     "gulp-batch": "^1.0.5",
     "gulp-cssnano": "^2.1.0",
+    "gulp-filter": "^7.0.0",
     "gulp-htmlclean": "^2.7.22",
-    "gulp-jshint": "^2.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-image": "^6.2.1",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.0",
     "gulp-preprocess": "^3.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sass": "^4.1.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.8",
-    "gulp-watch": "^5.0.0",
-    "jshint": "^2.8.0"
-  }
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {}
 }
