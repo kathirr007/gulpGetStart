@@ -176,7 +176,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .site-header .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
     transition: all 0.5s ease-out;
   }
@@ -315,5 +315,11 @@ body {
 .modal.show .modal-dialog {
   transform: translateY(-50%);
   top: 50%;
+}
+.media {
+  flex-direction: column;
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+  }
 }
 /* override bootstrap styles ends */
