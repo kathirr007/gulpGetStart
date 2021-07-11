@@ -1,6 +1,6 @@
 # gulpGetStart
 
-A Getting start Gulp Workflow boiler-plate for for Front end Dev to automate your workflow
+A Getting start Gulp Workflow boiler-plate for Front end Dev to automate your workflow
 
 Please check the site built using this workflow **[here](https://gulp-get-start.vercel.app/)**
 
