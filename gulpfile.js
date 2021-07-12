@@ -46,7 +46,7 @@ gulp.task('images', () => {
   })
   return (
     gulp
-      .src(images.in)
+      .src(images.in, { allowEmpty: true })
       .pipe(
         $.size({
           title: 'images in '
@@ -83,7 +83,7 @@ gulp.task('images', () => {
 // copy fonts
 gulp.task('fonts', () => {
   return gulp
-    .src(fonts.in)
+    .src(fonts.in, { allowEmpty: true })
     .pipe($.newer(dest + 'lbd/fonts/'))
     .pipe(gulp.dest(dest + 'lbd/fonts/'))
 })
@@ -91,7 +91,7 @@ gulp.task('fonts', () => {
 // build HTML files
 gulp.task('html', function () {
   let page = gulp
-    .src(html.in)
+    .src(html.in, { allowEmpty: true })
     // .pipe($.newer(html.out))
     .pipe($.preprocess({ context: html.context }))
   /*.pipe($.replace(/.\jpg|\.png|\.tiff/g, '.webp'))*/
@@ -112,7 +112,7 @@ gulp.task(
     })
     return (
       gulp
-        .src(css.in)
+        .src(css.in, { allowEmpty: true })
         .pipe(cssFilter)
         .pipe(
           $.rename(function (path) {
@@ -134,10 +134,12 @@ gulp.task(
 )
 
 gulp.task('js', function () {
-  gulp.src(`${source}js/lib/**/*.js`).pipe(gulp.dest(`${dest}js/lib`))
+  gulp
+    .src(`${source}js/lib/**/*.js`, { allowEmpty: true })
+    .pipe(gulp.dest(`${dest}js/lib`))
 
   let jsCompile = gulp
-    .src(`${source}js/script.js`)
+    .src(`${source}js/script.js`, { allowEmpty: true })
     .pipe(
       $.babel({
         presets: ['@babel/env']
