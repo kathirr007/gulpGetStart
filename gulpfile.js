@@ -10,7 +10,7 @@ let devBuild =
   source = 'src/',
   dest = devBuild ? 'app/' : 'dist/',
   css = {
-    in: [source + 'styles/*.+(css|scss|sass)'],
+    in: [source + 'styles/**/*.+(css|scss|sass|less)'],
     sassOpts: {
       outputStyle: devBuild ? 'normal' : 'compressed',
       imagePath: '../images',
@@ -105,9 +105,12 @@ gulp.task('html', function () {
 })
 
 gulp.task(
-  'sass',
+  'styles',
   gulp.series('fonts', function () {
     let cssFilter = $.filter(['**/*.+(css)'], {
+      restore: true
+    })
+    let lessFilter = $.filter(['**/*.+(less)'], {
       restore: true
     })
     return (
@@ -122,6 +125,9 @@ gulp.task(
         .pipe(cssFilter.restore)
         .pipe($.if(devBuild, $.sourcemaps.init()))
         .pipe($.sass().on('error', $.sass.logError))
+        .pipe(lessFilter)
+        .pipe($.less().on('error', console.log.bind(console)))
+        .pipe(lessFilter.restore)
         .pipe($.autoprefixer('last 4 version'))
         .pipe($.if(!devBuild, $.cssnano()))
         .pipe($.if(!devBuild, $.stripCssComments({ preserve: false })))
@@ -177,15 +183,16 @@ gulp.task(
   'watch',
   gulp.parallel('browser-sync', () => {
     gulp
-      .watch(['src/styles/**/*.scss', 'src/styles/**/*.css'])
-      .on('change', gulp.series('sass'))
+      // .watch(['src/styles/**/*.scss', 'src/styles/**/*.less', 'src/styles/**/*.css'])
+      .watch(['src/styles/**/*.(css|scss|sass|less)'])
+      .on('change', gulp.series('styles'))
     gulp.watch('src/js/*.js').on('change', gulp.series('js', reload))
     gulp.watch(html.watch).on('change', gulp.series('html', reload))
   })
 )
 
-gulp.task('build', gulp.parallel('html', 'images', 'sass', 'js'))
+gulp.task('build', gulp.parallel('html', 'images', 'styles', 'js'))
 gulp.task(
   'default',
-  gulp.parallel('html', 'images', 'sass', 'js', gulp.series('watch'))
+  gulp.parallel('html', 'images', 'styles', 'js', gulp.series('watch'))
 )
