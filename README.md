@@ -2,7 +2,7 @@
 
 A Getting start Gulp Workflow boiler-plate for Front end Dev to automate your workflow
 
-Please check the site built using this workflow **[here](https://gulp-get-start.vercel.app/)**
+Please check the site built using this workflow **[here](https://gulp-get-start.vercel.app/)** or **[here](https://gulp-getstart.herokuapp.com/)**
 
 ## Usage
 
@@ -23,8 +23,8 @@ Please check the site built using this workflow **[here](https://gulp-get-start.
 
 - **Updating a file whenever it is changed** so you don’t have to run a command to update it.
 - **Refreshing the browser automatically** when needed so you don’t have to alt-tab and hit the refresh button manually.
-- **Compile SCSS/SASS/CSS files** when needed without reloading the page for style changes.
-- **Auto-prefixer for newer css styles** when needed without reloading the page for style changes.
+- **Compile SCSS/SASS/LESS/CSS files** when needed without reloading the page for style changes.
+- **Auto-prefixer for newer css styles** prefix for ***['last 4 version']*** when needed without reloading the page for style changes.
 - **Stream the compiled css** when needed without reloading the page for style changes.
 - **Optimizing your CSS, JavaScript, images** and running every optimization you need to make sure your website is wicked fast.
 
@@ -32,7 +32,7 @@ Please check the site built using this workflow **[here](https://gulp-get-start.
 
 There are three objectives for the development phase. They are:
 
-- gulp tasks: `clean`, `images`, `fonts`, `sass`, `html`, `watch`, `browserSync`.
+- gulp tasks: `clean`, `images`, `fonts`, `styles`, `html`, `watch`, `browserSync`.
 - `default` task that chains everything created into a single task.
 - `build` task that builds project for production.
 
