@@ -1,0 +1,318 @@
+//************CHECKBOX CSS START**************//
+.customer-account-login {
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 22px;
+        height: 22px;
+    }
+    input[type="checkbox"]:before {
+        content: "";
+        background: @color-white;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        border: 2px solid @color-ivory-black;
+    }
+    input[type="checkbox"]:checked::before {
+        background: @color-black;
+    }
+    input[type="checkbox"]:checked::after {
+        content: "";
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(135deg);
+        display: inline-block;
+        position: absolute;
+        left: 2px;
+        top: 3px;
+        width: 16px;
+        height: 9px;
+    }
+}
+//************CHECKBOX CSS END**************//
+
+.customer-account-login {
+	.login-container {
+		.block.block-customer-login {
+			.block-title {
+				font-size: @font-size--tera;
+				line-height: 35px;
+				font-weight: 900;
+				color: @color-ivory-black;
+			}
+		}
+		.block.block-new-customer {
+			.block-title {
+				font-size: @font-size--tera;
+				line-height: 35px;
+				font-weight: 900;
+				color: @color-ivory-black;
+			}
+		}
+	}
+}
+.customer-account-login {
+	.login-container {
+		.block.block-customer-login {
+			.block-title {
+				font-size: @font-size--tera;
+				line-height: 35px;
+				font-weight: 900;
+				color: @color-ivory-black;
+			}
+		}
+		.block.block-new-customer {
+			.block-title {
+				font-size: @font-size--tera;
+				line-height: 35px;
+				font-weight: 900;
+				color: @color-ivory-black;
+			}
+		}
+		.require_field_text {
+			color: @color-error;
+			font-size: @font-size--milli;
+			line-height: 16px;
+			padding-bottom: 36px;
+			padding-top: 17px;
+            font-family: @font-family--primary;
+		}
+		.form.form-login {
+			.fieldset.login {
+				.actions-toolbar {
+					.secondary {
+						width: 100%;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+	#block-customer-login-heading, #block-new-customer-heading  {
+		font-size: @font-size--tera;
+		line-height: 35px;
+		font-weight: 900;
+		color: @color-ivory-black;
+        font-family: @font-family--secondary;
+	}
+	.block.block-customer-login {
+		.fieldset.login {
+			.field.email.required {
+				.label {
+					font-size: @font-size--base;
+					font-weight: 900;
+					line-height: 19px;
+					color: @color-ivory-black;
+                    font-family: @font-family--secondary;
+				}
+			}
+			.field.password.required {
+				.label {
+					font-size: @font-size--base;
+					font-weight: 900;
+					line-height: 19px;
+					color: @color-ivory-black;
+                    font-family: @font-family--secondary;
+				}
+			}
+		}
+	}
+	.page-title-wrapper {
+		.page-title {
+			display: none !important;
+		}
+	}
+}
+.amazon-validate-container {
+	.block {
+		.block-title {
+			border-bottom: none !important;
+		}
+	}
+}
+.login-container {
+	.block {
+		.block-title {
+			border-bottom: none !important;
+		}
+	}
+	.block.block-customer-login {
+		border-right: 1px solid @color-platinum-bright;
+	}
+	.actions-toolbar {
+		.action.login.primary {
+			width: 320px;
+			height: 52px;
+			background-color: @color-ivory-black;
+			font-size: @font-size--base;
+			font-family: @font-family--primary;
+			max-width: 100%;
+		}
+		.secondary {
+			.action.remind {
+				text-decoration: underline;
+				color: @color-ivory-black;
+				font-size: @font-size--base;
+				line-height: 20px;
+				font-weight: 400;
+				padding-top: 27px;
+                font-family: @font-family--primary;
+			}
+		}
+		.primary {
+			.action.create.primary {
+				width: 320px;
+				height: 52px;
+				background-color: @color-white;
+				color: @color-ivory-black;
+				border-color: @color-ivory-black;
+				padding-top: 15px;
+				font-size: @font-size--base;
+                font-family: @font-family--primary;
+			}
+		}
+	}
+	.block.block-new-customer {
+		.block-content {
+			p {
+				font-weight: 400;
+				font-size: @font-size--base;
+                font-family: @font-family--primary;
+			}
+			padding-left: 55px;
+		}
+		.block-title {
+			padding-left: 54px;
+		}
+	}
+	.fieldset.login {
+		.field.choice.persistent {
+			padding-left: 2px;
+
+			.label {
+				font-size: @font-size--base;
+				line-height: 24px;
+				color: @color-ivory-black;
+                font-family: @font-family--primary;
+			}
+		}
+	}
+	padding: 75px 25px 0px 95px;
+}
+.page-main {
+	.page.messages {
+		.messages {
+			padding-top: 10px;
+		}
+	}
+
+}
+.customer-account-create.page-layout-1column {
+    .columns {
+        padding-left: 85px;
+    }
+}
+@media only screen and (max-width: (@screen__m - 1)) {
+    .login-container {
+        .actions-toolbar {
+            .primary {
+                .action.login.primary {
+                    width: 100%;
+                }
+                .action.create.primary {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: (@screen__m - 1)) {
+	.login-container {
+		.block.block-customer-login {
+			border-right: none;
+			padding-top: 30px;
+		}
+		.actions-toolbar {
+			.secondary {
+				text-align: left;
+				padding-top: 27px;
+			}
+		}
+		.fieldset {
+			&:after {
+				text-align: left;
+			}
+		}
+		.block {
+			.block-title {
+				border-bottom: none;
+				border-bottom: none;
+				strong {
+					font-size: @font-size--tera;
+					line-height: 35px;
+					font-weight: 900;
+					color: @color-ivory-black;
+				}
+			}
+		}
+		.block.block-new-customer {
+			.block-content {
+				padding-left: 0px;
+			}
+			.block-title {
+				padding-left: 0px;
+			}
+		}
+		padding: 0px;
+	}
+    .customer-account-create.page-layout-1column {
+        .columns {
+            padding-left: 0px;
+        }
+    }
+	.amazon-validate-container {
+		.block {
+			.block-title {
+				strong {
+					font-size: @font-size--tera;
+					line-height: 35px;
+					font-weight: 900;
+					color: @color-ivory-black;
+				}
+				border-bottom: none;
+			}
+		}
+	}
+}
+@media only screen and (min-width: (@screen__m)) and (max-width: (@screen__l - 1)) {
+	.customer-account-login {
+		.login-container {
+			padding: 75px 25px 0px 0px !important;
+		}
+	}
+	.catalog-product-view {
+		.login-container {
+			padding: 0px 41px 0px 0px !important;
+		}
+	}
+	.catalog-product-view {
+		.modal-popup {
+			.modal-inner-wrap {
+				width: auto !important;
+			}
+		}
+	}
+}
+
+.catalog-product-view {
+	.login-container {
+		padding: 50px 15px 0px 0px;
+	}
+	.modal-popup{
+		.modal-inner-wrap{
+			margin: 2rem auto !important;
+				
+		}
+	} 
+}

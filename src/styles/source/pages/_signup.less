@@ -1,0 +1,313 @@
+//************CHECKBOX CSS START**************//
+.customer-account-create.page-layout-1column {
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 22px;
+        height: 22px;
+    }
+    input[type="checkbox"]:before {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        content: "";
+        background: @color-white;
+        border: 2px solid @color-ivory-black;
+    }
+    input[type="checkbox"]:checked::before {
+        background: @color-black;
+    }
+    input[type="checkbox"]:checked::after {
+        width: 16px;
+        height: 9px;
+        content: "";
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(135deg);
+        display: inline-block;
+        position: absolute;
+        left: 2px;
+        top: 3px;
+    }
+}
+//************CHECKBOX CSS END**************//
+
+.customer-account-create.page-layout-1column {
+    form.create.account.form-create-account {
+		width: 100% !important;
+		display: @flex !important;
+	}
+	.form-create-account {
+		.fieldset.create.info {
+			width: 50%;
+            padding-left: 18px;
+			.legend {
+				span {
+					font-size: @font-size--kilo;
+					line-height: 32px;
+					font-weight: 400;
+					color: @color-ivory-black;
+                    font-family: @font-family--primary;
+				}
+				border-bottom: none;
+			}
+		}
+		.fieldset.create.account {
+			width: 50%;
+            padding-left: 4px;
+			.legend {
+				border-bottom: none;
+				span {
+					font-size: @font-size--kilo;
+					line-height: 32px;
+					font-weight: 400;
+					color: @color-ivory-black;
+                    font-family: @font-family--primary;
+				}
+			}
+			.field.choice.persistent {
+				display: none;
+			}
+		}
+		.field.choice.newsletter {
+			padding-bottom: 20px;
+            display: @flex;
+
+            .label {
+                padding-left: 10px;
+            }
+		}
+		.field.is_residence {
+			padding-bottom: 10px;
+
+            .control {
+                span {
+                    padding-left: 5px;
+                }
+            }
+		}
+	}
+	.fieldset.create.account {
+        .require_field_text {
+			color: @color-error;
+			font-size: @font-size--milli;
+			line-height: 16px;
+			font-weight: 400;
+            padding-bottom: 46px;
+            padding-top: 50px;
+            font-family: @font-family--primary;
+	    }
+		.field.required {
+			.label {
+				font-size: @font-size--base;
+				font-weight: 900;
+				line-height: 19px;
+				color: @color-ivory-black;
+                font-family: @font-family--secondary;
+			}
+		}
+		.confirmation-div {
+			font-size: @font-size--base;
+			line-height: 24px;
+			color: @color-ivory-black;
+			font-weight: 400;
+            width: 80%;
+            font-family: @font-family--primary;
+			.label {
+				span {
+					font-size: @font-size--base;
+					line-height: 24px;
+					color: @color-ivory-black;
+					font-weight: 400;
+				}
+			}
+            .paragraph_text {
+                display: none;
+                div {
+                    padding-left: 0px !important;
+                    div {
+                      padding-left: 0px !important;
+                    }
+                }
+                a {
+                    color: @color-ivory-black;
+                    text-decoration: underline;
+                }
+            }
+            .field.is_residence {
+                .control {
+                    display: @flex;
+                }
+            }
+            .field.is_tax_exempt_status_checkbox {
+                .control {
+                    display: @flex;
+
+                    .label {
+                        padding-left: 10px;
+                    }
+                }
+            }
+		}
+	}
+	.page-title-wrapper {
+		.page-title {
+			padding-top: 70px;
+			color: @color-ivory-black;
+			font-weight: 900;
+			font-size: @font-size--tera;
+			line-height: 35px;
+            padding-left: 100px;
+            font-family: @font-family--secondary;
+		}
+	}
+	.fieldset.create.info {
+		.field {
+			.label {
+				font-size: @font-size--base;
+				font-weight: 900;
+				line-height: 19px;
+				color: @color-ivory-black;
+                font-family: @font-family--secondary;
+			}
+		}
+		.field.is_residence {
+			span {
+				font-size: @font-size--base;
+				line-height: 24px;
+				font-weight: 400;
+                font-family: @font-family--primary;
+			}
+		}
+	}
+	.field {
+		.control {
+			.input-text {
+				width: 465px;
+				height: 30px;
+			}
+			.required-entry {
+				width: 465px;
+				height: 30px;
+                font-size: @font-size--milli;
+                line-height: 16px;
+                font-weight: 400;
+                color: @color-ivory-black;
+                font-family: @font-family--primary;
+			}
+			.password-strength-meter {
+				display: none;
+			}
+		}
+	}
+	.actions-toolbar {
+		.action.submit.primary {
+			width: 320px;
+			height: 52px;
+			background-color: @color-ivory-black;
+            font-family: @font-family--primary;
+		}
+	}
+}
+@media only screen and (min-width: (@screen__m)) and (max-width: (@screen__xm - 1)) {
+	.customer-account-create.page-layout-1column {
+		form.create.account.form-create-account {
+			display: @flex !important;
+		}
+        .columns {
+            padding-left: 18px;
+        }
+        .field {
+            .control {
+                .required-entry {
+                    width: 320px;
+                }
+                .input-text {
+                    width: 320px;
+                }
+            }
+        }
+        .form-create-account {
+            .fieldset.create.info {
+               padding-left: 0px;
+            }
+        }
+        .page-title-wrapper {
+            .page-title {
+                padding-left: 18px;
+            }
+        }
+	}
+}
+
+@media only screen and (min-width: (@screen__m)) and (max-width: 1092px) {
+    .customer-account-create.page-layout-1column {
+        .field {
+            .control {
+                .required-entry {
+                    width: 90%;
+                }
+                .input-text {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: (@screen__m - 1)) {
+	.customer-account-create.page-layout-1column {
+        form.create.account.form-create-account {
+            width: 100% !important;
+            display: @show !important;
+        }
+        .form-create-account {
+            .fieldset.create.info {
+                width: 100%;
+                padding-left: 0px;
+                margin-bottom: 20px;
+            }
+            .fieldset.create.account {
+                width: 100%;
+                padding-left: 0px;
+                margin-bottom: 0px;
+                .require_field_text {
+                    padding-top: 0px;
+                    padding-bottom: 26px;
+                }
+                .confirmation-div {
+                    width: 98%;
+                }
+                .field.is_residence {
+			        padding-bottom: 0px !important;
+        		}
+				.fieldset.create.account:after {
+					margin-top: 0px;
+				}
+            }
+        }
+		.field {
+			.control {
+				.input-text {
+					width: 100%;
+				}
+				.required-entry {
+					width: 100%;
+				}
+			}
+		}
+        .page-title-wrapper {
+            .page-title {
+                padding-top: 0px;
+                padding-bottom: 53px;
+                padding-left: 12px;
+            }
+        }
+        .actions-toolbar {
+            .action.submit.primary {
+                width: 100%;
+                text-align: center;
+            }
+	    }
+	}
+}

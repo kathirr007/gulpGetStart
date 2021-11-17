@@ -10,7 +10,7 @@ let devBuild =
   source = 'src/',
   dest = devBuild ? 'app/' : 'dist/',
   css = {
-    in: [source + 'styles/**/*.+(css|scss|sass|less)'],
+    in: [source + 'styles/**/*.+(css|scss|sass)', source + 'styles/**/theme-hbftextiles.less'],
     sassOpts: {
       outputStyle: devBuild ? 'normal' : 'compressed',
       imagePath: '../images',
@@ -84,8 +84,8 @@ gulp.task('images', () => {
 gulp.task('fonts', () => {
   return gulp
     .src(fonts.in, { allowEmpty: true })
-    .pipe($.newer(dest + 'lbd/fonts/'))
-    .pipe(gulp.dest(dest + 'lbd/fonts/'))
+    .pipe($.newer(dest + 'fonts/'))
+    .pipe(gulp.dest(dest + 'fonts/'))
 })
 
 // build HTML files
@@ -107,7 +107,7 @@ gulp.task('html', function () {
 gulp.task(
   'styles',
   gulp.series('fonts', function () {
-    let cssFilter = $.filter(['**/*.+(css)'], {
+    let cssFilter = $.filter(['**/*.+(css|scss)'], {
       restore: true
     })
     let lessFilter = $.filter(['**/*.+(less)'], {
@@ -122,9 +122,9 @@ gulp.task(
             path.extname = '.scss'
           })
         )
-        .pipe(cssFilter.restore)
         .pipe($.if(devBuild, $.sourcemaps.init()))
         .pipe($.sass().on('error', $.sass.logError))
+        .pipe(cssFilter.restore)
         .pipe(lessFilter)
         .pipe($.less().on('error', console.log.bind(console)))
         .pipe(lessFilter.restore)
@@ -173,7 +173,8 @@ gulp.task('js', function () {
 gulp.task('browser-sync', function () {
   browserSync.init(null, {
     server: {
-      baseDir: 'app'
+      baseDir: 'app',
+      https: true
     },
     open: false,
     notify: true

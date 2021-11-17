@@ -1,0 +1,170 @@
+.margin-bottom {
+	&--lv0 {
+		margin-bottom: @margin-bottom--lv0;
+	}
+
+	&--lv1 {
+		margin-bottom: @margin-bottom--lv1;
+	}
+
+	&--lv2 {
+		margin-bottom: @margin-bottom--lv2;
+	}
+
+	&--lv3 {
+		margin-bottom: @margin-bottom--lv3;
+	}
+
+	&--lv4 {
+		margin-bottom: @margin-bottom--lv4;
+	}
+	@media all and (min-width: @screen__m) {    
+		&--lv1 {
+			margin-bottom: @margin-bottom--lv1-md;
+		}
+    
+		&--lv2 {
+			margin-bottom: @margin-bottom--lv2-md;
+		}
+    
+		&--lv3 {
+			margin-bottom: @margin-bottom--lv3-md;
+		}
+    
+		&--lv4 {
+			margin-bottom: @margin-bottom--lv4-md;
+		}
+	}
+}
+
+.margin-top{
+	&--lv1{
+		margin-top: @margin-top--lv1;
+	}
+	@media all and (min-width: @screen__m) {
+		&--lv1{
+			margin-top: @margin-top--lv1-md;
+		}
+		&-lv1{
+			margin-top: @margin-top-lv1-md;
+		}
+	}    
+}
+
+.line-height {
+	&--none {
+		line-height: @no-line-height;
+	}
+
+	&--small {
+		line-height: @line-height--small;
+	}
+
+	&--base {
+		line-height: @line-height--base;
+	}
+
+	&--medium {
+		line-height: @line-height--medium;
+	}
+}
+
+.text-align--center {
+	text-align: center;
+}
+
+.text-align--left {
+	text-align: left;
+}
+
+.text-align--right {
+	text-align: right;
+}
+
+.mx-auto {
+	margin: 0 auto !important;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.margin-50 {
+	margin-top: 5rem;
+}
+.separator {
+	&--horizontal {
+		max-width: 7.5rem;
+	}
+}
+
+.display--none {
+	display: none;
+}
+
+.display--flex {
+	display: @flex;
+}
+
+.display--inline {
+	display: inline!important;
+}
+
+.flex-jc--sb {
+	justify-content: space-between;
+}
+
+.flex-ai--fe {
+	align-items: flex-end;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+@media all and (max-width: (@screen__m - 1)) {
+	.desktop-only {
+		display: none;
+	}
+	.m-auto-mobile{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.w-100 {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: @screen__m) {
+	.mobile-only {
+		display: none;
+	}
+	.m-auto-desktop{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.position-md-relative{
+		position: relative;
+	}
+	.position-md-absolute{
+		position: absolute;
+	}
+	.no-gutters-md {
+		margin-right: 0;
+		margin-left: 0;
+	}
+      
+	.no-gutters-md > .col,
+	.no-gutters-md > [class*="col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

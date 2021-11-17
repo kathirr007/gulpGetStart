@@ -1,0 +1,261 @@
+
+/* banner css */
+.cms-hbft-homepage {
+    header.page-header {
+        border: 0 !important;
+    }
+    .column.main {
+        padding-bottom: 0;
+    }
+}
+.banner-slider {
+    .pagebuilder-poster-content button {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+        font-size: 16px;
+        margin: 10px 0 0;
+        padding: 12px 20px;
+    }
+}
+.home-banner {
+    .slick-dots {
+        bottom: -40px;
+        li {
+            width: auto;
+            button {
+                height: 2px;
+                width: 15px;
+                background: #d1d1d1;
+                border-radius: 0;
+                padding: 1px;
+                &:hover {
+                    border: 0;
+                }
+            }
+        }
+        li.slick-active {
+            button {
+                background: #000;
+                width: 40px;
+            }
+        }
+    }
+}
+/* banner css end */
+
+
+/* section header css start */
+.section_header_bg{
+    padding: 36px 0px 60px 15px;
+    max-width: 88%;
+    float: right;    
+    .header-content-sec{
+        width: 41%;
+        margin: 0 0 27px 0;
+        h2{
+            font-size: @font-size--tera;
+            line-height: 43px;
+            color: @color-ivory-black;
+            margin: 0px 0px 6px;
+            font-family: @font-family--secondary;
+        }
+        p{
+            font-family: @font-family--primary;
+            font-size: @font-size--base;
+            line-height: 24px;
+            margin: 0px;
+            &:last-child{
+                margin: 0px;
+            }
+        }
+    }
+    .section-card-text{
+        background: #fff;
+        padding: 49px 0px 13px 10px;
+        p{
+            a {
+                font-size: @font-size--base;
+                line-height: 24px;
+                color: @color-ivory-black;
+                font-family: @font-family--primary;
+            }
+        }
+    }
+
+    .custom-slider-sectionheader{
+        .slider{
+            width: 100%;
+            margin: 30px auto;
+            .slick-slide {
+                padding: 0px 32px 0 0;
+                transition: all ease-in-out .3s;
+                &:last-child {
+                    padding-right: 0px;
+                }
+                img {
+                    width: 100%;
+                    height: 270px;
+                }
+            }
+        }
+        .slick-arrow {
+            width: 25px;
+            height: 50px;
+            background: rgba(229, 229, 229, 0.25);
+            margin-top: -31px;
+            &:before {
+                content: "";
+                border: solid rgb(35, 31, 32);
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 8px;
+            } 
+        }
+        .slick-arrow.slick-disabled {
+            opacity: 0;
+        }
+        .slick-arrow.slick-next {
+            right: 0px;
+            padding-right: 10px;
+            &::before {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+            &:hover, &:focus{
+                color: #231F20;
+                outline: none;
+                background: rgba(229, 229, 229, 0.25);
+            }
+        }
+        .slick-arrow.slick-prev {
+            left: 0px;
+            padding-left: 9px;
+            &::before {
+                transform: rotate(135deg);
+                -webkit-transform: rotate(135deg);
+            }
+            &:hover, &:focus{
+                color: #231F20;
+                outline: none;
+                background: rgba(229, 229, 229, 0.25);
+            }
+        }
+    }
+}
+/* section header css ends */
+
+
+@media (max-width: (@screen__xm - 1)){
+    .section_header_bg{
+        padding: 29px 0px 43px 15px;
+        max-width: 98%;
+        margin: auto;
+    }    
+}
+@media (max-width: (@screen__m - 1)){
+    .home-banner {
+        margin: 0 0 35px !important;
+        padding: 0 !important;
+        .pagebuilder-slide-wrapper {
+            .pagebuilder-overlay.pagebuilder-poster-overlay {
+                align-items: baseline;
+                text-align: left;
+                padding: 50px 15px;
+                h1 {
+                    text-align: left !important;
+                    span {
+                        font-size: 48px !important;
+                    }
+                }
+            }
+        }
+        video#VideoWorker-0 {
+            width: 100% !important;
+            height: 200px !important;
+        }
+    }
+    .cms-hbft-homepage {
+        header.page-header {
+            border-bottom: 1px solid #231f20 !important;
+            margin: 0;
+        }
+        header .header.content {
+            margin-bottom: 5px;
+        }
+    }
+    .banner-slider .pagebuilder-poster-content button {
+        margin-top: 20rem;
+    }
+    .section-header-home{
+        padding: 0px;
+    }
+    .section_header_bg {
+        .header-content-sec{
+            margin: 0 0 20px 0;
+            width: 100%;
+            h2{
+                margin: 0px;
+            }
+        }
+        .section-card-text {
+            padding: 33px 40px 5px 10px;
+        }
+        .custom-slider-sectionheader{
+            .slider{
+                .slick-slide{
+                    padding: 0px 17px 0 0;
+                }
+            }
+            .slick-next {
+                right: 2px;
+            }
+        } 
+    }
+}
+/* privacy banner start*/
+.cms-hbft-homepage {
+	.hbft-cookie-banner {
+		bottom: 0;
+		z-index: 99999;
+		display: flex;
+		left: 0;
+		width: 100%;
+		background-color: @color-ivory-black;
+		color: @color-white;
+		font-size: @font-size--base;
+		height: 50px;
+		font-family: @font-family--primary;
+		.icon-close {
+			&::before {
+				vertical-align: middle;
+				font-size: 15px;
+				padding: 2px;
+				border-radius: 50%;
+			}
+		}
+		span {
+            height: 50px !important;
+            margin-top: 16px !important;
+		}
+	}
+	.icon-close {
+		&:before {
+			content: '\e801';
+            cursor: pointer;
+		}
+	}
+}
+
+
+@media only screen and (max-width: (@screen__m - 1)) { 
+.cms-hbft-homepage {
+	.hbft-cookie-banner {
+		height: 126px !important;
+    }
+.hbft-cookie-banner span {
+    margin-top: 0px !important;
+}
+}
+}
+/*privacy banner End*/

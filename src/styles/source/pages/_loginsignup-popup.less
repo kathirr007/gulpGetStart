@@ -1,0 +1,166 @@
+// Login signup popup desktop css Start
+.modal-popup.login-modalpopup {
+    .modal-header {
+        border-bottom: none !important;
+        .action-close {
+            outline: none;
+            &:before {
+                color: @color-ivory-black;
+            }
+        }
+    }
+    .modal-content {
+        border: none;
+        font-family: @font-family--primary;
+        .login-container {
+            .block {
+                .block-title {
+                    border-bottom: none !important;
+                    font-weight: 900;
+                    font-size: @font-size--tera;
+                    line-height: 35px;
+                    color: @color-ivory-black;
+                }
+            }
+            .form-login {
+                .fieldset {
+                    .field {
+                        margin-bottom: 18px;
+                        label.label {
+                            font-weight: 900 !important;
+                            font-size: @font-size--base;
+                            line-height: 19px;
+                            color: @color-ivory-black;
+                            margin-bottom: 3px !important;
+                        }
+                        .control {
+                            width: 100%;
+                            padding-right: 41px;
+                            .input-text {
+                                background: @color-white;
+                                border: 1px solid @color-platinum-bright;
+                                box-sizing: border-box;
+                                border-radius: 0;
+                                height: 30px;
+                                font-weight: normal;
+                                font-size: @font-size--milli;
+                                line-height: 17px;
+                                color: @color-ivory-black;
+                            }
+                        }
+                    }
+                    .field.choice.persistent {
+                        margin-bottom: 35px;
+                        .label {
+                            font-size: @font-size--base;
+                            line-height: 24px;
+                            color: @color-ivory-black;
+                            font-family: @font-family--primary;
+                            font-weight: normal !important;
+                        }
+                        input[type="checkbox"] {
+                            width: 16px;
+                            height: 16px;
+                            &:checked::after {
+                                width: 12px;
+                                height: 6px;
+                            }
+                            &:before {
+                                content: "";
+                                width: 16px;
+                                height: 16px;
+                                display: inline-block;
+                                border: 1px solid rgba(0, 0, 0, 0.6);
+                            }
+                        }
+                    }
+                }
+                .require_field_text {
+                    font-weight: normal;
+                    font-size: @font-size--milli;
+                    line-height: 17px;
+                    color: #8C0000;
+                    margin-bottom: 36px;
+                }
+            }
+            .actions-toolbar {
+                .primary {
+                    .action.create.primary {
+                        width: 320px;
+                        height: 50px;
+                        background-color: @color-white;
+                        border-color: @color-dark-charcoal;
+                        padding: 15px;
+                        font-size: @font-size--base;
+                        font-family: @font-family--primary;
+                        letter-spacing: 0.1em;
+                        color: @color-dark-charcoal;
+                        box-sizing: border-box;
+                        line-height: 16px;
+                        font-weight: normal;
+                    }
+                }
+                .secondary {
+                    .action.remind {
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .block.block-new-customer {
+                .block-title {
+                    margin-bottom: 19px;
+                }
+                .block-content {
+                    p {
+                        line-height: 20px;
+                        color: @color-ivory-black;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .block.block-customer-login {
+                .block-title {
+                    margin-bottom: 33px;
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+// Login signup popup desktop css End
+
+// Login signup popup Mobile css start
+@media only screen and (max-width: (@screen__m - 1 )) {
+    .modal-popup.login-modalpopup {
+        left: 0;
+        right: 0;
+        .modal-content {
+            padding: 0 1.6rem !important;
+            .login-container {
+                .actions-toolbar {
+                    .primary {
+                        .action.create.primary {
+                            width: 100%;
+                        }
+                    }
+                }
+                .form-login {
+                    .fieldset {
+                        .field {
+                            .control {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+                .block.block-customer-login {
+                    border-bottom: 1px solid @color-platinum-bright;
+                }
+            }
+            .block.block-new-customer {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+// Mobile css end

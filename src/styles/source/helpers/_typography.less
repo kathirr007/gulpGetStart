@@ -1,0 +1,171 @@
+.font {
+	&-size {
+		&--nano {
+			font-size: @font-size--nano;
+		}
+
+		&--micro {
+			font-size: @font-size--micro;
+		}
+
+		&--milli {
+			font-size: @font-size--milli;
+		}
+
+		&--base {
+			font-size: @font-size--base;
+		}
+
+		&--kilo {
+			font-size: @font-size--kilo;
+		}
+
+		&--mega {
+			font-size: @font-size--mega;
+		}
+
+		&--giga {
+			font-size: @font-size--giga;
+		}
+
+		&--tera {
+			font-size: @font-size--tera;
+		}
+
+		&--peta {
+			font-size: @font-size--peta;
+		}
+
+		&--exa {
+			font-size: @font-size--exa;
+		}
+
+	}
+
+	&-family {
+		&--primary {
+			font-family: @font-family--primary;
+		}
+
+		&--secondary {
+			font-family: @font-family--secondary;
+		}
+	}
+
+	&--xl {
+		.fluid-type(font-size, @screen__xxs, @screen__xl, @font-size--tera, @font-size--exa);
+		font-family: @font-family--secondary;
+	}
+}
+
+h1 {
+	.fluid-type(font-size, @screen__xxs, @screen__xl, @font-size--tera, @font-size--peta);
+	font-family: @font-family--secondary;
+}
+
+h2 {
+	.fluid-type(font-size, @screen__xxs, @screen__xl, @font-size--giga, @font-size--tera);
+	font-family: @font-family--secondary;
+}
+
+h3 {
+	font-size: @font-size--tera;
+	font-family: @font-family--secondary;
+}
+
+h4 {
+	.fluid-type(font-size, @screen__xxs, @screen__xl, @font-size--mega, @font-size--giga);
+	font-family: @font-family--secondary;
+}
+
+.color-black {
+	color: @color-black;
+}
+
+.color-white {
+	color: @color-white;
+}
+
+.color-platinum {
+	color: @color-platinum;
+}
+
+/*------------------------------------*\
+  #PRIMARY FONT
+\*------------------------------------*/
+
+@font-face {
+	font-family: 'NeuzeitS';
+	src: local('sans-serif'), url('../fonts/NeuzeitS-Regular.ttf') format('truetype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NeuzeitS-bold';
+	src: local('sans-serif'), url('../fonts/NeuzeitS-Bold.otf') format('opentype');
+	font-display: swap;
+}
+
+/*------------------------------------*\
+  #FONT ICONS
+\*------------------------------------*/
+
+@font-face {
+	font-family: 'fontello';
+	src: url('../fonts/fontello.eot?88670338');
+	src: url('../fonts/fontello.eot?88670338#iefix') format('embedded-opentype'),
+		url('../fonts/fontello.woff?88670338') format('woff'),
+		url('../fonts/fontello.ttf?88670338') format('truetype'),
+		url('../fonts/fontello.svg?88670338#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before{
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'fontello' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: normal;
+	font-size: 3.2rem;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*----------ICONS------------*/
+.icon-download:before { content: '\e800'; } /* '' */
+.icon-close:before { content: '\e801'; } /* '' */
+.icon-hamburger-menu:before { content: '\e802'; } /* '' */
+.icon-zoom:before { content: '\e803'; } /* '' */
+.icon-flammability:before { content: '\e804'; } /* '' */
+.icon-wet-dry-crocking:before { content: '\e805'; } /* '' */
+.icon-colorfastness-to-light:before { content: '\e806'; } /* '' */
+.icon-facts:before { content: '\e807'; } /* '' */
+.icon-physical-properties:before { content: '\e808'; } /* '' */
+.icon-abrasion-high-traffic:before { content: '\e809'; } /* '' */
+.icon-abrasion-low-traffic:before { content: '\e80a'; } /* '' */
+.icon-filled-heart:before { content: '\e80c'; } /* '' */
+.icon-search:before { content: '\e80d'; } /* '' */
+.icon-unfilled-heart:before { content: '\e80e'; } /* '' */
+.icon-save-as-pdf:before { content: '\e80f'; } /* '' */
+.icon-price-lists:before { content: '\e810'; } /* '' */
+.icon-maintenance:before { content: '\e811'; } /* '' */
+.icon-indoor-advantage:before { content: '\e812'; } /* '' */
+.icon-performance-frame:before { content: '\e813'; } /* '' */
+.icon-sustainability:before { content: '\e814'; } /* '' */
+.icon-up-arrow:before { content: '\e815'; } /* '' */
+.icon-down-arrow:before { content: '\e816'; } /* '' */
+.icon-right-arrow:before { content: '\e817'; } /* '' */
+.icon-left-arrow:before { content: '\e818'; } /* '' */
+.icon-facebook:before { content: '\e819'; } /* '' */
+.icon-instagram:before { content: '\e81a'; } /* '' */
+.icon-twitter:before { content: '\e81b'; } /* '' */
+.icon-youtube:before { content: '\e81c'; } /* '' */
+.icon-pinterest:before { content: '\e81d'; } /* '' */
+.icon-linkedin:before { content: '\e81e'; } /* '' */
+.icon-print:before { content: '\e81f'; } /* '' */

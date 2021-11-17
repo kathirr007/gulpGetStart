@@ -1,0 +1,551 @@
+header {
+  &.page-header {
+    .panel {
+      &.wrapper {
+        border-bottom: none;
+        background: none;
+      }
+    }
+    div {
+      &.header {
+        &.panel {
+          padding: 17px 20px 0px;
+          max-width: 1260px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom:26px;
+
+          @media (max-width: (@screen__m - 1)) {
+            position: absolute !important;
+            margin-bottom: 0;
+            left: 0px;
+            right: 0px;
+            padding: 0px 18px 0px;
+          }
+
+          & > .header {
+            &.links {
+              margin: 0px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+
+              @media (max-width: (@screen__m - 1)) {
+                display: none;
+              }
+
+              li {
+                float: left;
+                margin: 0px;
+
+                a {
+                  float: left;
+                  font-weight: 900;
+                  font-size: 14px;
+                  line-height: 17px;
+                  text-transform: uppercase;
+                  color: @color-ivory-black;
+                  font-family: @font-family--secondary;
+                }
+
+                &.customer-welcome {
+                  margin: 0px 0px 0px 25px;
+                  display: inline-flex;
+                  &:after {
+                    content: "";
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    color: #231f20;
+                    width: 2px;
+                    height: 11px;
+                    background: #231f20;
+                    margin: 2px 14px;
+                    vertical-align: top;
+                    clear: unset;
+                    display: inline-block;
+                  }
+
+                  &.loggedin {
+                    margin: 0px 0px 0px 46px;
+                    span.customer-name {
+                      display: inline-block;
+                    }
+
+                    &:after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .minicart-wrapper {
+    order: -1;
+    margin-left: auto;
+    font-size: unset;
+    line-height: 16px;
+
+    @media (max-width: (@screen__m - 1)) {
+      margin: 0px 0px 0px auto;
+    }
+
+    .action {
+      &.showcart {
+        margin-right: 45px;
+
+        @media (max-width: (@screen__m - 1)) {
+          position: relative;
+          z-index: 1;
+          margin: 31px 0px;
+        }
+
+        &:before {
+          display: none;
+        }
+        .text {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0px;
+          font-weight: 900;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+          color: @color-ivory-black;
+          font-family: @font-family--secondary;
+        }
+      }
+    }
+  }
+
+  .header {
+    &.content {
+      max-width: 1264px;
+      padding: 0px 20px;
+      border-bottom: none;
+
+      @media screen and (max-width: (@screen__m - 1)) {
+        text-align: center;
+        padding: 16px 20px;
+      }
+
+      .logo {
+        margin: 0px;
+
+        @media screen and (max-width: (@screen__m - 1)) {
+          float: none;
+          display: inline-block;
+          vertical-align: top;
+
+          img {
+            max-width: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sections {
+  &.nav-sections {
+    @media (max-width: (@screen__m - 1)) {
+      .header {
+        &.links {
+          margin: 0px;
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          border: none;
+          padding: 0px 20px;
+          box-sizing: border-box;
+
+          li {
+            float: left;
+            margin: 0px;
+
+            &.customer-welcome {
+              &:after {
+                content: "";
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                color: #231f20;
+                width: 1px;
+                height: 12px;
+                background: #231f20;
+                margin: 3px 9px;
+                vertical-align: top;
+                clear: unset;
+                display: inline-block;
+              }
+
+              &.loggedin {
+                width: 100%;
+
+                .header {
+                  &.links {
+                    padding: 0px;
+
+                    li {
+                      width: 100%;
+                      margin: 0px 0px 40px;
+                    }
+                  }
+                }
+
+                .authorization-link {
+                  &:after {
+                    display: none;
+                  }
+                }
+
+                &:after {
+                  display: none;
+                }
+              }
+            }
+
+            a {
+              float: left;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 19px;
+              text-transform: uppercase;
+              color: @color-ivory-black;
+              border: none;
+              padding: 0px;
+              letter-spacing: 0.1em;
+              font-family: @font-family--primary;
+
+              strong {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+span {
+  &.nav-toggle {
+    @media (max-width: (@screen__m - 1)) {
+      top: 30px;
+      left: 22px;
+    }
+
+    &:before {
+      @media (max-width: (@screen__m - 1)) {
+        content: "";
+        background: url(../images/hamburger__menu.png);
+        width: 11px;
+        height: 22px;
+        font-size: unset;
+
+        .nav-open & {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.nav-sections {
+  .section-items {
+    @media (max-width: (@screen__m - 1)) {
+      height: inherit;
+    }
+  }
+
+  #store\.menu {
+    @media (max-width: (@screen__m - 1)) {
+      min-height: ~"calc(100% - 190px)";
+      margin-left: 0px;
+    }
+  }
+
+  #store\.links {
+    @media (max-width: (@screen__m - 1)) {
+      display: block !important;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+a:focus-visible {
+  outline: #08f auto 5px;
+}
+
+button.action.primary:focus {
+  outline: #08f auto 5px;
+}
+
+div.message {
+  &.error {
+    color: #c92723;
+  }
+}
+
+header {
+  .header.content {
+    border-bottom: none !important;
+  }
+}
+
+@media (max-width: (@screen__m - 1)) {
+  .page-header {
+    border-bottom: 1px solid #231f20 !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
+
+header {
+  .minicart-wrapper {
+    .action.showcart {
+      .counter.qty {
+        background: #fff;
+        color: #231f20;
+        font-size: 14px;
+        font-family: "NeuzeitS-bold", "sans-serif";
+        margin: 0;
+        vertical-align: top;
+        line-height: 16px;
+        height: auto;
+        span.counter-number {
+          text-shadow: none;
+        }
+        &::before {
+          content: "(";
+          position: relative;
+          left: 3px;
+        }
+        &::after {
+          content: ")";
+          position: relative;
+          right: 3px;
+        }
+      }
+      .text {
+        vertical-align: top;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+// header navigation css
+.ui-widget-content {
+  li.Woven {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Leather {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Wrapped {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Wallcovering {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Drapery {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.All {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Pricelists {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Performance {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Maintenance {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Warranty {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Graded-In {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.About {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Designers {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Corporate {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Find {
+    span {
+      text-transform: initial;
+    }
+  }
+  li.Contact {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Showrooms {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  li.Visit {
+    span {
+      text-transform: capitalize;
+    }
+  }
+}
+
+li.level0.nav-1.category-item.level-top.ui-menu-item.show-sub.active {
+  &:after {
+    content: "";
+    width: 17px;
+    height: 1px;
+    background: #000;
+    display: block;
+    position: static;
+  }
+}
+li.level0.nav-2.category-item.level-top.ui-menu-item.show-sub.active {
+  &:after {
+    content: "";
+    width: 17px;
+    height: 1px;
+    background: #000;
+    display: block;
+    position: static;
+  }
+}
+li.level0.nav-4.category-item.level-top.ui-menu-item.show-sub.active {
+  &:after {
+    content: "";
+    width: 17px;
+    height: 1px;
+    background: #000;
+    display: block;
+    position: static;
+  }
+}
+
+.nav-sections {
+  .navigation {
+    .level0 {
+      ul.level0.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all.show {
+        top: 26px;
+      }
+    }
+  }
+}
+header.page-header {
+  div.header.panel {
+    align-items: initial !important;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  .quote-link {
+    order: -1;
+    margin-left: auto;
+    margin-right: 45px;
+  }
+  header {
+    .minicart-wrapper {
+      order: 1;
+      font-size: unset;
+      line-height: 16px;
+      margin-left: 0 !important;
+    }
+    .header.content {
+      .logo {
+        margin-top: -8px !important;
+      }
+    }
+  }
+  header.page-header {
+    div.header.panel {
+      > .header.links {
+        order: 2;
+      }
+    }
+  }
+  .header.links {
+    .quote-header {
+      display: none !important;
+    }
+  }
+}
+@media (max-width: (@screen__m - 1)) {
+  .panel.header {
+    .quote-link {
+      display: none;
+    }
+  }
+  .nav-sections-item-content {
+    .header.links {
+      .quote-header {
+        margin-bottom: 31px !important;
+      }
+    }
+  }
+}
+// my Quote header section end
+.header.content {
+	.logo {
+		img {
+			max-width: 186px;
+		}
+	}
+}
+.panel.header{
+  margin-bottom:18px !important;
+}
+.sections.nav-sections{
+  top: 13.4rem;
+}
+
+@media only screen and (max-width: (@screen__m - 1)) {
+  .sections.nav-sections {
+    top: 0px;
+  }
+}

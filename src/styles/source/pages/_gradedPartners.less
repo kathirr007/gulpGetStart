@@ -1,0 +1,223 @@
+.pricelists-index-gradedinpartners {
+
+    .filter-options-content {
+        li {
+            input[type="radio"] {
+                &:checked {
+                    &:before {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        background: #231f20;
+                        border-radius: 50%;
+                        display: inline-block;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &:after {
+                        content: none !important;
+                    }
+                }
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: 2px solid #231f20;
+                opacity: 1;
+                top: 4px;
+                &:focus {
+                    box-shadow: none !important;
+                }
+            }
+            label {
+                &:before {
+                    content: none !important;
+                }
+            }
+        }
+    }
+    .page-main {
+        .page-title-wrapper {
+            .page-title {
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: -0.03em;
+                color: #53565A;
+                margin: 34px 0 51px 0;
+            }
+        }
+        .columns {
+            .column.main {
+                .graded-in-partners {
+                    width: 100%;
+                    height: auto;
+                    padding-left: 40px;
+                    .product-outer-block {
+                        margin-bottom: 85px;
+                        .product-inner-block {
+                            .graded-in-partners-image {
+                                width: 184px;
+                                height: 239px;
+                                display: block;
+                            }
+                            .graded-in-partners-name {
+                                width: 184px;
+                                font-weight: 900;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #53565A;
+                                margin-top: 15px;
+                                min-height: 38px;
+                            }
+                            .graded-in-partners-date {
+                                font-weight: normal;
+                                font-size: 14px;
+                                line-height: 28px;
+                                color: #53565A;
+                            }
+                            .price-pdf-download {
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 14px;
+                                line-height: 28px;
+                                text-decoration-line: underline;
+                                color: #53565A;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            .sidebar-main {
+                flex-basis: 350px !important;
+                height: 339px;
+                background: rgba(229, 229, 229, 0.25);
+                
+                    .filter-options {
+                        .filter-options-item {
+                            border-bottom: none;
+                            padding: 20px 20px 20px 20px;
+                            .filter-options-title {
+                                text-transform: unset;
+                                padding: 0;
+                                margin: 0px 1px 15px 13px;
+                                font-weight: 900;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #231F20;
+                                text-transform: uppercase;
+                            }
+                            .filter-options-content {
+                                li.custom_sort_by {
+                                    margin-bottom: 16px;
+                                    label {
+                                        padding: 0px 0 0 41px;
+                                        margin: 0;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        color: #231F20;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+@media only screen and (max-width: (@screen__m - 1))  {
+    .pricelists-index-gradedinpartners {
+        .modal-popup.modal-slide {
+            left: 0px !important;
+        }
+        .block.filter {
+			strong {
+				svg {
+					margin: 0px 0px 0px 6px;
+				}
+			}
+		}
+		.sidebar.sidebar-main {
+			width: 100%;
+			padding: 0px;
+			background: none;
+			margin-right: 0px;
+		}
+		.page-main {
+			.columns {
+				.sidebar-main {
+					background: none !important;
+				}
+			}
+		}
+		.modal-content {
+			background-color: #f4f4f4 !important;
+			border: none;
+		}
+		div#narrow-by-list-sort_mob {
+			.filter-options-item {
+				border-bottom: none;
+			}
+		}
+		.modal-footer {
+			border-top: none;
+			button {
+				border: 1px solid #333;
+				height: 50px;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #333333;
+				width: calc(100% - 27px);
+				margin: 16px 8px 57px 19px;
+			}
+		}
+		.filter-options-title {
+			font-weight: 900;
+			font-family: 'NeuzeitS-bold','sans-serif';
+			line-height: 24px;
+			color: #231f20;
+			text-transform: uppercase;
+			margin-bottom: 16px;
+			font-size: 16px !important;
+		}
+		.modal-header {
+			border: none;
+		}
+        .page-main {
+            .columns {
+                .column.main {
+                    -webkit-order: 2;
+                    order: 2;
+                    .page-title-wrapper {
+                        margin-top: 20px;
+                        .page-title {
+                            margin: 0 0 20px 0;
+                        }
+                    }
+                    .graded-in-partners {
+                        .product-outer-block {
+                            margin-bottom: 73px;
+                            .product-inner-block {
+                                margin: 0 auto;
+                                width: 184px;
+                            }
+                        }
+                    }
+                }
+                .sidebar-main {
+                    -webkit-order: 1;
+                    order: 1;
+                    .filter-options {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+}

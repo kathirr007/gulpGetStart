@@ -1,0 +1,479 @@
+.catalogsearch-result-index {
+    // Left side filters css start
+
+    div{
+        &#narrow-by-list{
+            &.filter-options{
+
+                @media (max-width:(@screen__m - 1 )) {
+                    width: ~"calc(100% - 49px)";
+                    margin: 0px 30px 0px 19px;
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .columns{
+        @media (max-width: (@screen__m - 1)){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px;
+            align-items: flex-start;
+        }
+    }
+
+    .sidebar-main {
+        width: 35rem !important;
+        flex-basis: 35rem !important;
+        margin-right: 0 !important;
+        background: rgba(229,229,229,0.25) !important;
+        padding: 2rem 2rem 0rem 1.9rem !important;
+
+        @media (max-width: (@screen__m - 1)) {
+            padding: 0px !important;
+            background: none !important;
+        }
+
+        div{
+            &#layered-filter-block{
+                background: none;
+                margin-bottom: 89px;
+
+                @media (max-width: (@screen__m - 1)){
+                    margin-bottom: 32px;
+                }
+
+                .filter-title{
+
+                    &:first-child{
+                        @media (max-width: (@screen__m - 1)) {
+                            position: static;
+                            display: block;
+                        }
+                    }
+
+                    strong{
+
+                        @media (max-width: (@screen__m - 1)){
+                            width: 100%;
+                            height: auto;
+                            background: @color-ivory-black;
+                            font-size: 15px;
+                            line-height: 18px;
+                            color: @color-white;
+                            top: 0px !important;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: @font-family--primary;
+                            height: 48px;
+                            right:0px;
+                            position: static;
+
+                            &:before{
+                                display: none !important;
+                            }
+
+                            svg{
+                                margin: 0px 0px 0px 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        div {
+            &.block{
+                &.filter{
+                    &.active {
+
+                        .close_filter_popup{
+                            @media (max-width: (@screen__m - 1)) {
+                                display: none;
+                                font-size: unset;
+                                top: 15px;
+
+                                &:before{
+                                    @media (max-width: (@screen__m - 1)) {
+                                        display: none;
+                                    }
+                                }
+
+                                .filter-active&{
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .filter_checkbox  {
+
+                            background: none;
+                            padding: 0px;
+
+                            @media (max-width: (@screen__m - 1)){
+                                display: none;
+                            }
+
+                            .filter-active&{
+
+                                @media (max-width: (@screen__m - 1)){
+                                    background: rgba(229, 229, 229, 0.25);
+                                    display: block;
+                                    padding-top: 20px;
+                                    height: ~"calc(100% - 50px)";
+                                    top: 50px;
+                                }
+                            }
+
+                            #narrow-by-list-sort_mob{
+                                background: none;
+
+                                .filter-options-title{
+                                    font-weight: 900;
+                                    font-family: @font-family--secondary;
+                                    line-height: 24px;
+                                    color: @color-ivory-black;
+                                    text-transform: uppercase;
+                                    margin-bottom: 16px;
+                                }
+
+                                .filter-options-item{
+
+                                    @media (max-width: (@screen__m - 1)) {
+                                        padding: 0px;
+
+                                        width: ~"calc(100% - 53px)";
+                                        margin: 0px 34px 0px 19px;
+                                        border-bottom: 1px solid rgba(35, 31, 32, 20%) !important;
+
+                                    }
+
+
+                                    ol{
+                                        li{
+
+                                            margin-bottom: 16px;
+
+                                            label{
+                                                padding: 0px 0px 0px 27px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:after{
+                                    font-size: 16px;
+                                    font-weight: 900;
+                                    text-transform: uppercase;
+                                    font-family: @font-family--secondary;
+                                    line-height: 24px;
+                                    padding: 0px 34px 0px 19px;
+                                    margin: 16px 0px 0px;
+                                    color: @color-ivory-black;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .filter.block {
+            background: none !important;
+        }
+        .filter-content.hni {
+            .filter-options-item {
+                border-bottom: 1px solid rgba(68,68,68,0.2) !important;
+                padding: 0px !important;
+                .filter-options-title {
+                    font-size: @font-size--base;
+                    text-transform: uppercase;
+                    padding: 0;
+                    line-height: 2.4rem;
+                    margin: 0 0 1.6rem;
+                    font-weight: 900;
+                    color: @color-ivory-black;
+                    font-family: @font-family--secondary;
+                }
+                .filter-options-content {
+                    padding: 0;
+                    border-bottom: none;
+
+                    .items{
+                        .item{
+
+                            margin: 0px 0px 8px;
+
+                            
+
+                            .plpfilter_checkbox_box{
+                                display: block;
+                                width: auto;
+                                height: auto;
+                                margin: 3px 11px 0px 0px;
+
+                                input[type="checkbox"]{
+                                    width: 18px;
+                                    height: 18px;
+                                    border: 2px solid rgba(0, 0, 0, 0.6);
+                                    border-radius: 3px;
+        
+                                    &:before{
+                                        border: none;
+                                        width: 14px;
+                                        height: 14px;
+                                    }
+        
+                                    &:checked{
+                                        &:before{
+                                            content: "";
+                                            background: #000;
+                                            border: none !important;
+                                            border-radius: 0px;
+                                        }
+        
+                                        &:after{
+                                            width: 14px;
+                                            height: 14px;
+                                            left: 0;
+                                            top: 0;
+                                            background: url(../images/check_icon.svg) no-repeat center !important;
+                                        }
+                                    }
+        
+        
+        
+                                }
+                            }
+                            .checkbox_label{
+
+                                padding: 0px;
+                                font-size: @font-size--base;
+                                line-height: 24px;
+                                font-family: @font-family--primary;
+                                max-width: ~"calc(100% - 29px)";
+
+                                &::before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .item.custom_sort_by {
+                        margin-bottom: 1.6rem;
+                        label {
+                            padding: 0px 0px 0px 27px;
+                            font-size: @font-size--base;
+                            line-height: 2.4rem;
+                            color: @color-ivory-black;
+                            font-family: @font-family--primary;
+                            &:before {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                top: 0.3rem;
+                                border: 0.2rem solid @color-davys-grey;
+                            }
+                            input {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .filter_title {
+                display: inline-block;
+                width: 100%;
+                vertical-align: top;
+                font-size: @font-size--base;
+                padding: 0px;
+                font-weight: 900;
+                line-height: 2.4rem;
+                color: @color-ivory-black;
+                text-transform: uppercase;
+                margin: 16px 0px 0px;
+                font-family: @font-family--secondary;
+
+                @media (max-width: (@screen__m - 1)){
+                    display: none;
+                }
+            }
+            .filter_checkbox {
+                padding: 0px;
+                background: #f8f8f8 !important;
+                .filter-actions {
+                    float: right;
+                    .action.clear.filter-clear {
+                        font-family: @font-family--primary;
+                        font-weight: normal;
+                        font-size: @font-size--base;
+                        line-height: 24px;
+                        text-decoration-line: underline;
+                        color: #231F20 !important;
+                    }
+                }
+                .filter-options {
+                    border-bottom: none !important;
+                    .filter-options-item {
+                        padding: 16px 0px 0px !important;
+                        border: none !important;
+
+                        &.Color{
+                            display: none;
+    
+                            &.Schemes{
+                                display: block;
+                            }
+                        }
+
+                        .filter-options-title {
+                            line-height: 24px;
+                            margin: 0px !important;
+                            font-weight: 900;
+                            text-transform: capitalize;
+                            overflow: unset;
+                            color: #231f20;
+                            font-family: 'NeuzeitS-bold','sans-serif';
+
+                            &.Category {
+                                padding: 0 0 0 0 !important;
+                            }
+                            &.Price {
+                                padding: 0.8rem 0 !important;
+                            }
+                            &.Sale {
+                                padding: 0 !important;
+                            }
+                            &:after {
+                                top: 0;
+                                transform: unset;
+                                transform-origin: top;
+                                background: url(../images/filter-arrow.png) no-repeat;
+                                width: 23px;
+                                height: 10px;
+                                border: none !important;
+                                right: 0px;
+
+                            }
+                        }
+                        .filter-options-content {
+
+                            margin-top: 8px;
+
+                            .items {
+                                padding-left: 0 !important;
+                                .item {
+                                    padding-left: 0 !important;
+
+                                    &:last-child{
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #mobile_filter_apply {
+                    display: none;
+
+                    @media (max-width: (@screen__m - 1)) {
+                        border: 1px solid #333333;
+                        height: 50px;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: #333333;
+        
+                        width: ~"calc(100% - 27px)";
+                        margin: 16px 8px 57px 19px;
+        
+                        .filter-active&{
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+        
+        
+                        }
+        
+                    }
+                }
+                .filter-current {
+                    li.item {
+                        .filter-value {
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #231F20;
+                        }
+                        .action.remove {
+                            top: 60%;
+                            svg {
+                                width: 13px;
+                                height: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Left side filters css End
+    // Right side products css start
+    .search.results {
+        dl.block {
+            display: none;
+        }
+        .products-grid {
+            margin-top: 0;
+        }
+        .products-grid {
+            .product-item-info {
+                padding: 0 0 1.2rem;
+                .product-item-details {
+                    margin-top: 1.5rem ;
+                    .product-item-name {
+                        margin: 0 0 0 0 !important;
+                        a {
+                            font-size: @font-size--milli;
+                        }
+                    }
+                }
+            }
+        }
+        // Right side products css End
+
+        //*****strike through price********//
+        .product-item-info {
+            .old-price {
+                text-decoration: line-through;
+            }
+            .supplies_text {
+                font-weight: 700;
+                line-height: 16px;
+                font-size: @font-size--milli;
+                color: @color-ivory-black;
+                margin-left: 1rem;
+                display: contents;
+            }
+        }
+    }
+
+}
+
+.search-autocomplete {
+    ul {
+        li.selected {
+            box-shadow: 0 0 3px 1px #00699d;
+
+        }
+    }
+}
