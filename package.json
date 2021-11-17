@@ -24,7 +24,6 @@
     "cross-env": "^7.0.3",
     "del": "^3.0.0",
     "eslint-config-prettier": "^8.3.0",
-    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -50,5 +49,7 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
