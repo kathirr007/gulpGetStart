@@ -29,7 +29,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       // throw (new Error(`Error executing git push`));
       return;
     });
-    // return;
+    return;
   } else {
     console.log('Dist Folder exists. Pushing the files to github...');
     return;
