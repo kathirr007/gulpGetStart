@@ -3,6 +3,7 @@ import { exec } from 'node:child_process';
 
 // Define the command you want to execute
 const npmScript = 'npm run build';
+const pushScript = 'git add . && git push';
 
 // Define the path to the folder
 const folderPath = './dist';
@@ -26,5 +27,15 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
     return;
   }
 
-  console.log('Folder exists');
+  console.log('Dist Folder exists');
+  exec(pushScript, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing npm script: ${error}`);
+      return;
+    }
+
+    // Log the output of the script
+    console.log(`stdout: ${stdout}`);
+    // console.error(`stderr: ${stderr}`);
+  });
 });

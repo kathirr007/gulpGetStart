@@ -15,7 +15,6 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
     "prepush": "node prepush.mjs",
-    "push": "git add . && git push"
   },
   "repository": {
     "type": "git",
