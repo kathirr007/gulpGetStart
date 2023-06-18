@@ -24,7 +24,8 @@ fs.access(filePath, fs.constants.F_OK, async (err) => {
       // Log the output of the script
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
-      throw (new Error(`Please try to add new files and then push again...`))
+      console.log(`Please try to add new files and then push again...`)
+      return;
     });
     // return;
   } else {
