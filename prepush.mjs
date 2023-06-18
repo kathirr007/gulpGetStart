@@ -12,7 +12,7 @@ const folderPath = './dist';
 const filePath = './dist/index.html';
 
 // Check if the folder exists
-fs.access(filePath, fs.constants.F_OK, async (err) => {
+fs.access(filePath, fs.constants.F_OK, (err) => {
   if (err) {
     console.error('Index.html file does not exist. Running build command...');
     // Execute the npm script
