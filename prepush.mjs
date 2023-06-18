@@ -5,6 +5,7 @@ import { exec } from 'node:child_process';
 const npmScript = 'npm run build';
 const prePushScript = 'npm run prepush';
 const pushScript = 'git add . && git commit -m "Fresh dist build created & pushed" && git push';
+const gitPush = exec('git push');
 
 // Define the path to the folder
 const folderPath = './dist';
@@ -25,7 +26,7 @@ fs.access(filePath, fs.constants.F_OK, async (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
       console.log(`Please try to add new files and then push again...`)
-      return;
+      process.exit();
     });
     // return;
   } else {
