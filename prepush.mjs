@@ -23,6 +23,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       return;
     }); */
   } else {
+    console.log(`Dist folder with Index.html exists. Continuing pushing the files to github...`)
     return;
   }
 
