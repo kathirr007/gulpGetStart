@@ -14,9 +14,9 @@ const filePath = './dist/index.html';
 // Check if the folder exists
 fs.access(filePath, fs.constants.F_OK, (err) => {
   if (err) {
-    console.error('Index.html file does not exist. Running build command...');
+    console.error('Index.html file does not exist. Please run "npm run build" first and then try to push again...');
     // Execute the npm script
-    exec(npmScript, (error, stdout, stderr) => {
+    /* exec(npmScript, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error executing npm script: ${error}`);
         return;
@@ -28,7 +28,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       console.log(`Please try to add new files and then push again...`)
       // throw (new Error(`Error executing git push`));
       return;
-    });
+    }); */
     return;
   } else {
     console.log('Dist Folder exists. Pushing the files to github...');
