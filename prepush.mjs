@@ -24,7 +24,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
     });
-    return;
+    // return;
   }
 
   console.log('Dist Folder exists');
