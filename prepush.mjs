@@ -25,6 +25,16 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
     });
+    exec(prePushScript, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error executing npm script: ${error}`);
+        return;
+      }
+
+      // Log the output of the script
+      console.log(`stdout: ${stdout}`);
+      // console.error(`stderr: ${stderr}`);
+    });
     // return;
   } else {
     console.log('Dist Folder exists. Pushing the files to github...');
