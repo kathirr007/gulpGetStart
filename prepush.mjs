@@ -30,7 +30,4 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       return;
     }); */
   }
-  console.log('Dist Folder exists. Pushing the files to github...');
-  return;
-
 });
