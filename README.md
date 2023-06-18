@@ -2,7 +2,7 @@
 
 A Getting start Gulp Workflow boiler-plate for Front end Dev to automate your workflow
 
-Please check the site built using this workflow **[here](https://gulp-get-start.vercel.app/)** or **[here](https://gulp-getstart.herokuapp.com/)**
+Please check the site built using this workflow **[here](https://kathirr007.github.io/gulpGetStart/)** or **[here](https://gulp-get-start.vercel.app/)**
 
 ## Usage
 
