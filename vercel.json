@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "raw.githubusercontent.com",
+      "destination": "151.101.76.133"
+    }
+  ]
+}
