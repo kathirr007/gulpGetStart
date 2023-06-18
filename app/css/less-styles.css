@@ -3521,7 +3521,6 @@ div.block-search input {
 .section_header_bg .custom-slider-sectionheader .slider .slick-slide {
   padding: 0px 32px 0 0;
   -webkit-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
 .section_header_bg .custom-slider-sectionheader .slider .slick-slide:last-child {
@@ -6231,8 +6230,7 @@ div#ajaxcartpopup.low-inv-popup-main .popup-title-text {
   overflow: hidden;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .modal-popup.quote-success-popup .modal-inner-wrap .modal-content td.detail-section .product-item-details .item-price {
   margin: 23px 0px 0px;
@@ -6659,8 +6657,7 @@ div.page-main {
   font-size: 16px;
   line-height: 24px;
   font-family: 'NeuzeitS', 'Open Sans';
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   margin: 0px;
   padding: 0px;
 }
@@ -7783,8 +7780,7 @@ div.breadcrumbs .items strong {
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 24px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20 !important;
 }
 .catalogsearch-result-index .sidebar-main .filter-content.hni .filter_checkbox .filter-options {
@@ -8019,8 +8015,7 @@ div.breadcrumbs .items strong {
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 17px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -8033,8 +8028,7 @@ div.breadcrumbs .items strong {
   width: 100%;
   overflow: visible;
   max-width: 40px;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .checkout-cart-index .cart-container .cart.table-wrapper .cart.items.data.table .cart.item .item-info td.col.subtotal {
@@ -8864,8 +8858,7 @@ div.breadcrumbs .items strong {
   font-family: 'NeuzeitS-bold', 'sans-serif';
   font-style: normal;
   color: #53565A;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .heading {
   font-size: 16px;
@@ -8879,8 +8872,7 @@ div.breadcrumbs .items strong {
   font-family: 'NeuzeitS-bold', 'sans-serif';
   font-style: normal;
   font-weight: 900;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .view-web {
   font-size: 16px;
@@ -8888,8 +8880,7 @@ div.breadcrumbs .items strong {
   font-family: 'NeuzeitS-bold', 'sans-serif';
   font-style: normal;
   font-weight: 900;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 @media (min-width: 768px) {
   .sustainability-index-index .product-main-page {
@@ -9265,8 +9256,7 @@ h2#block-designer-products-heading {
   font-weight: normal;
   font-size: 14px;
   line-height: 28px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #53565A;
 }
 .pricelists-index-index .page-main .columns .sidebar-main {
@@ -9492,8 +9482,7 @@ button.action-close:focus {
   font-weight: normal;
   font-size: 14px;
   line-height: 28px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #53565A;
 }
 .pricelists-index-gradedinpartners .page-main .columns .sidebar-main {
@@ -9945,8 +9934,7 @@ button.action-close:focus {
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 17px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -9965,8 +9953,7 @@ button.action-close:focus {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -9978,8 +9965,7 @@ button.action-close:focus {
   width: 100%;
   overflow: visible;
   max-width: 40px;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .quote-quote-index .cart.table-wrapper .cart tr td.col.subtotal {
@@ -10120,8 +10106,7 @@ button.action-close:focus {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20;
 }
 .quote-quote-index .request-reserve-all {
@@ -11862,8 +11847,7 @@ button.action-close:focus {
   border: none;
   font-size: 1.4rem;
   line-height: 17px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #231F20;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -12373,3 +12357,5 @@ button.action-close:focus {
 }
 /* contact-us styles end */
 /**** OVERRULES ****/
+
+/*# sourceMappingURL=maps/less-styles.css.map */
