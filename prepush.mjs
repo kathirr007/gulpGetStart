@@ -3,6 +3,7 @@ import { exec } from 'node:child_process';
 
 // Define the command you want to execute
 const npmScript = 'npm run build';
+const prePushScript = 'npm run prepush';
 const pushScript = 'git add . && git push';
 
 // Define the path to the folder
@@ -37,7 +38,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
     });
-
+    return;
   }
 
 });
