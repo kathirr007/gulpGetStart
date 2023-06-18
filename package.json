@@ -12,7 +12,9 @@
     "heroku-postbuild": "npm run build",
     "start": "node index.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install",
+    "postbuild": "git add . && git push"
   },
   "repository": {
     "type": "git",
@@ -53,7 +55,8 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.0",
     "sass": "^1.63.4",
-    "through2": "^4.0.2"
+    "through2": "^4.0.2",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "express": "^4.17.1"
