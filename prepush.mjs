@@ -26,7 +26,8 @@ fs.access(filePath, fs.constants.F_OK, async (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
       console.log(`Please try to add new files and then push again...`)
-      process.kill(process.pid);
+      throw (new Error(`Error executing git push`));
+      return;
     });
     // return;
   } else {
