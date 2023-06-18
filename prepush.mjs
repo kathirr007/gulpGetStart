@@ -25,7 +25,8 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
     });
-    return;
+    throw (new Error(`Please try to add new files and then push again...`))
+    // return;
   } else {
     console.log('Dist Folder exists. Pushing the files to github...');
     return;
