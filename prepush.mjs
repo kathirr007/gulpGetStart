@@ -11,7 +11,7 @@ const folderPath = './dist';
 const filePath = './dist/index.html';
 
 // Check if the folder exists
-fs.access(filePath, fs.constants.F_OK, (err) => {
+fs.access(filePath, fs.constants.F_OK, async (err) => {
   if (err) {
     console.error('Index.html file does not exist. Running build command...');
     // Execute the npm script
@@ -24,8 +24,8 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
       // Log the output of the script
       console.log(`stdout: ${stdout}`);
       // console.error(`stderr: ${stderr}`);
+      throw (new Error(`Please try to add new files and then push again...`))
     });
-    throw (new Error(`Please try to add new files and then push again...`))
     // return;
   } else {
     console.log('Dist Folder exists. Pushing the files to github...');
