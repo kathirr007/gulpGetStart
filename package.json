@@ -15,7 +15,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
     "prepush": "node prepush.mjs",
-    "postpush": "npm run prebuild"
+    "deploy-prod": "npm run build && git add . && git commit -m `Added-fresh-build-dist-folder` && git push"
   },
   "repository": {
     "type": "git",
