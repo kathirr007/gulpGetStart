@@ -14,7 +14,7 @@ $(() => {
     $('#page-media .animated-group').css('visibility: hidden;')
 
     if (hash === '#page-media')
-      $('#page-media .animated-group').addClass('animated fadeInRight')
+      $('#page-media .animated-group').addClass(' animated fadeInRight')
   })
 
   // Modifies modal and injects high resolution image

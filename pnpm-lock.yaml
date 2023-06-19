@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.22.5
   '@babel/preset-env': ^7.22.5
+  animate.css: ^4.1.1
   bootstrap: ^5.3.0
   browser-sync: ^2.29.3
   cross-env: ^7.0.3
@@ -45,6 +46,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.22.5
   '@babel/preset-env': 7.22.5_@babel+core@7.22.5
+  animate.css: 4.1.1
   bootstrap: 5.3.0
   browser-sync: 2.29.3
   cross-env: 7.0.3
@@ -1435,6 +1437,10 @@ packages:
 
   /alphanum-sort/1.0.2:
     resolution: {integrity: sha512-0FcBfdcmaumGPQ0qPn7Q5qTgz/ooXgIyp1rf8ik5bGX8mpE2YHjC0P/eyQvxu1GURYQgq9ozf2mteQ5ZD9YiyQ==}
+    dev: true
+
+  /animate.css/4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
     dev: true
 
   /ansi-colors/1.1.0:

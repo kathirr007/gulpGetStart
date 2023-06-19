@@ -125,7 +125,7 @@ function processStyles(source, sourceType) {
       $.displaylog.logger(`Compiling ${sourceType} files...`)
     })
     .pipe($.if(devBuild, $.sourcemaps.init()))
-    .pipe($.if(sourceType === 'css' || sourceType === 'scss', sass().on('error', sass.logError)))
+    .pipe($.if(sourceType === 'css' || sourceType === 'scss', sass({ includePaths: ['node_modules'] }).on('error', sass.logError)))
     .pipe($.if(sourceType === 'less', $.less().on('error', console.log.bind(console))))
     .pipe($.autoprefixer('last 4 version'))
     .pipe($.if(prodBuild, $.cssnano()))
