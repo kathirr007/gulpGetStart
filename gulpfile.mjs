@@ -200,6 +200,7 @@ task('browser-sync', () => {
     },
     open: false,
     notify: true,
+    port: 3020
   })
 })
 
