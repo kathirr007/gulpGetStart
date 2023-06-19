@@ -14,7 +14,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
-    "prepush": "node prepush.mjs"
+    "prepush": "node prepush.mjs",
+    "postpush": "npm run prebuild"
   },
   "repository": {
     "type": "git",
