@@ -49,6 +49,7 @@ $border-radius: 20px;
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-family-serif: 'Merriweather', 'Times New Roman', serif;
+  --bs-border-width: 1px;
 
   /* Page Variables */
 
@@ -56,9 +57,10 @@ $border-radius: 20px;
   --color-medium: #ddd;
   --color-reverse: var(--gray-dark);
   --color-text: var(--gray-dark);
-  --color-text-reverse: var(--light);
+  --color-text-reverse: var(--bs-light);
   --font-family-title: var(--font-family-sans-serif);
   --font-family-text: var(--font-family-serif);
+  border: none !important;
 }
 
 body {
