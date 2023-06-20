@@ -262,6 +262,7 @@
   --color-text-reverse: var(--bs-light);
   --font-family-title: var(--font-family-sans-serif);
   --font-family-text: var(--font-family-serif);
+  border: none !important;
 }
 
 body {
