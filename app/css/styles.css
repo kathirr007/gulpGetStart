@@ -253,14 +253,16 @@
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-serif: "Merriweather", "Times New Roman", serif;
+  --bs-border-width: 1px;
   /* Page Variables */
   --font-weight-light: 200 !important;
   --color-medium: #ddd;
   --color-reverse: var(--gray-dark);
   --color-text: var(--gray-dark);
-  --color-text-reverse: var(--light);
+  --color-text-reverse: var(--bs-light);
   --font-family-title: var(--font-family-sans-serif);
   --font-family-text: var(--font-family-serif);
+  border: none !important;
 }
 
 body {
@@ -303,10 +305,6 @@ body {
   }
 }
 /* Override Styles */
-.bg-medium {
-  background-color: var(--medium) !important;
-}
-
 /* Custom Styles */
 .animated {
   visibility: visible !important;
@@ -424,7 +422,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--light);
+  background-color: var(--bs-light);
   visibility: hidden;
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -496,7 +494,7 @@ body {
 /* Layout Float */
 @media screen and (min-width: 992px) {
   #page-floater {
-    margin: 50px 0 150px 0;
+    margin: 50px 0 100px 0;
   }
   #page-floater .img-container {
     position: relative;
